@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selenium_wrapper"
+version = "0.0.0"
+readme = "readme.md"
+license = {text = "MIT"}
+description = "A reusable Python wrapper that simplifies Selenium WebDriver automation."
+authors = [
+    { name = "Ruan Camello", email = "ruanfaustinocamellodasilva@gmail.com" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "selenium>=4.0",
+    "python-dotenv>=1.0",
+    "requests>=2.32.2",
+]
+
+[project.urls]
+Source = "https://github.com/decimo3/selenium_wrapper"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+    "pylint>=4.0",
+    "build>=1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+selenium_wrapper = [
+    "resources/*.lang",
+]
