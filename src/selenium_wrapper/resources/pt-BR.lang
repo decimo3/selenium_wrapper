@@ -1,0 +1,44 @@
+# cSpell: locale en,en-US,pt,pt-BR
+# Executioner
+EXECUTIONER_ARGS_MISS=Não foram passados argumentos para a função!
+EXECUTIONER_COMMAND_TO_RUN=Comando à executar: %s.
+EXECUTIONER_COMMAND_RESULT=Resultado da execução: %s.
+EXECUTIONER_EXEC_ERROR=O programa {program} retornou com erro desconhecido!
+EXECUTIONER_PROG_MISS=O sistema não pode encontrar o programa {program}!
+# Terminator
+TERMINATOR_OS_ERROR=Unsupported operating system: {system}!
+TERMINATOR_KILLING_RESIDUAL_PROCESSES=Fechando processos residuais...
+# Version
+VERSION_ARGS_INT_MISMATCH=Argumentos precisam ser números inteiros!
+VERSION_ARGS_STR_MISMATCH=O texto de versão não está no padrão esperado!
+VERSION_COMPARER_TYPE_MISMATCH=O objeto comparado não é do mesmo tipo!
+# Updater
+UPDATER_CHECKING_LOCAL_VERSIONS=Verificando as versões do browser e do driver...
+UPDATER_CHROME_LOCAL_NOT_FOUND=O caminho do binário do Google Chrome não foi encontrado!
+UPDATER_CHROME_LOCAL_PATH_ERROR=O navegador Google Chrome não está acessível no caminho especificado!
+UPDATER_CHROME_LOCAL_VERSION_ERROR=A versão do navegador Google Chrome não pode ser obtida!
+UPDATER_CHROME_LOCAL_MAJOR_VERSION=Chrome major version: %s.
+UPDATER_DRIVER_LOCAL_VERSION_ERROR=A versão do ChromeDriver local não pode ser obtida!
+UPDATER_DRIVER_LOCAL_MAJOR_VERSION=Driver major version: %s.
+UPDATER_EQUALS_LOCAL_VERSIONS=ChromeDriver e Google Chrome já estão atualizados!
+UPDATER_DRIVER_REMOTE_VERSION_CHECK=Verificando atualização do chromedriver...
+UPDATER_DRIVER_REMOTE_VERSION_ERROR=A versão do ChromeDriver remoto não pode ser obtida!
+UPDATER_DRIVER_REMOTE_VERSION_FOUND=Versão do ChromeDriver no canal MILESTONE: %s
+UPDATER_DRIVER_REMOTE_DOWNLOADING=Baixando a nova versão do chromedriver...
+UPDATER_DRIVER_REMOTE_DOWNLOAD_ERROR=Não foi possível baixar a atualização!
+UPDATER_DRIVER_OLD_LOCAL_UNINSTALL=Removendo a versão antiga do chromedriver...
+UPDATER_DRIVER_NEW_REMOTE_INSTALL=Descompactando e instalando a atualização...
+UPDATER_DRIVER_NEW_REMOTE_ERROR=O arquivo de atualização não está acessível!
+UPDATER_DRIVER_SUCCESSFUL_UPDATE=Atualização do chromedriver foi concluída!
+# Wrapper
+WRAPPER_URL_NOT_DEFINED=A URL para o site não foi informada!
+WRAPPER_DRIVER_NOT_FOUND=O programa ChromeDriver não está acessível no caminho esperado!
+WRAPPER_CHROME_NOT_FOUND=O navegador Google Chrome não pode ser encontrado automaticamente. O caminho do binário deve ser especificado no caminho 'GOOGLE_CHROME'.
+WRAPPER_PATH_TO_FIND=PATH_NAME: %s, TIMEOUT: %s
+WRAPPER_PATH_NOT_FOUND=A caminho "{pathname}" não foi encontrado!
+WRAPPER_PATH_TYPE_MISTYPE=O tipo do caminho "{pathname}" não pode ser definido!
+WRAPPER_ELEMENT_TO_FIND=BY_TYPE: %s, BY_VALUE: %s
+WRAPPER_ELEMENT_FOUND=Foram encontrados %d elementos!
+WRAPPER_ELEMENT_NOT_FOUND=Não foi encontrado nenhum elemento pelo caminho "{pathname}"!
+
+
