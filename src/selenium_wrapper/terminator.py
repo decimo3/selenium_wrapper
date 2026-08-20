@@ -2,7 +2,7 @@
 import platform
 import logging
 from .multilang import LANG
-from .executioner import execute
+from .executioner import execute, SubprocessError
 
 def instance_killer() -> None:
     ''' Function to kill residual programs '''
@@ -17,9 +17,12 @@ def instance_killer() -> None:
         raise OSError(LANG.TERMINATOR_OS_ERROR.format(system=system))
     logger.info(LANG.TERMINATOR_KILLING_RESIDUAL_PROCESSES)
     for process in processes[system]:
-        if system == 'Windows':
-            execute('taskkill', '/F', '/IM', process)
-        elif system in ('Darwin', 'Linux'):
-            execute('pkill', '-f', process)
-        else:
-            raise OSError(LANG.TERMINATOR_OS_ERROR.format(system=system))
+        try:
+            if system == 'Windows':
+                execute('taskkill', '/F', '/IM', process)
+            elif system in ('Darwin', 'Linux'):
+                execute('pkill', '-f', process)
+            else:
+                raise OSError(LANG.TERMINATOR_OS_ERROR.format(system=system))
+        except SubprocessError:
+            pass
