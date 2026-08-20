@@ -10,7 +10,7 @@ name = "selenium_wrapper"
 dynamic = ["version"]
 readme = "readme.md"
 license = "MIT"
-licence-files = ["licence.md"]
+license-files = ["license.md"]
 description = "A reusable Python wrapper that simplifies Selenium WebDriver automation."
 authors = [
     { name = "Ruan Camello", email = "ruanfaustinocamellodasilva@gmail.com" },
