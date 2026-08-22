@@ -38,7 +38,7 @@ WRAPPER_PATH_TO_FIND=PATH_NAME: %s, TIMEOUT: %s
 WRAPPER_PATH_NOT_FOUND=A caminho "{pathname}" não foi encontrado!
 WRAPPER_PATH_TYPE_MISTYPE=O tipo do caminho "{pathname}" não pode ser definido!
 WRAPPER_ELEMENT_TO_FIND=BY_TYPE: %s, BY_VALUE: %s
-WRAPPER_ELEMENT_FOUND=Foram encontrados %d elementos!
+WRAPPER_ELEMENT_FOUND_COUNT=Foram encontrados %d elementos!
 WRAPPER_ELEMENT_NOT_FOUND=Não foi encontrado nenhum elemento pelo caminho "{pathname}"!
 
 
