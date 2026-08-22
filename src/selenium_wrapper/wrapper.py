@@ -44,7 +44,10 @@ class Wrapper:
             Path(paths_file)
         )
         instance_killer()
-        driver_updater()
+        self.chrome_path = chrome_fullpath_finder()
+        if not self.chrome_path:
+            self.chrome_path = self.paths.get('GOOGLE_CHROME')
+        driver_updater(self.chrome_path)
         self.initialize(website_path)
     def initialize(
             self,
@@ -60,12 +63,9 @@ class Wrapper:
             raise FileNotFoundError(LANG.WRAPPER_DRIVER_NOT_FOUND)
         _service = service.Service(executable_path=str(driver_path))
         _options = options.Options()
-        chrome_path = chrome_fullpath_finder()
-        if not chrome_path:
-            chrome_path = self.paths.get('GOOGLE_CHROME')
-            if not chrome_path:
-                raise FileNotFoundError(LANG.WRAPPER_CHROME_NOT_FOUND)
-        _options.binary_location = chrome_path
+        if not self.chrome_path:
+            raise FileNotFoundError(LANG.WRAPPER_CHROME_NOT_FOUND)
+        _options.binary_location = self.chrome_path
         _options.add_argument(f'--app={site_url}')
         _options.add_argument(f'--user-data-dir={temp_path}')
         self.driver = webdriver.WebDriver(service=_service, options=_options)
