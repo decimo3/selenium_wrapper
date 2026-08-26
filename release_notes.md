@@ -1,5 +1,3 @@
-# Fixed static version on package manifest
+# Fixed url get on initialization
 
-Replaced static package version, now it's dynamic on a pythonic way.
-
-This fixes an issue with direct source-code installations, where pip uses the package manifest version, causing it to conflict with the actual version.
+Now Wrapper class constructor accept URL as argument.
