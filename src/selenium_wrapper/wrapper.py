@@ -1,6 +1,7 @@
 ''' Module that allows to handle WebDriver easily. '''
 import logging
 from enum import Enum
+from urllib.parse import urlparse
 from pathlib import Path
 from time import sleep
 from datetime import datetime, timedelta
@@ -54,8 +55,9 @@ class Wrapper:
             website_path: str,
         ) -> None:
         ''' Startup Selenium WebDriver Wrapper '''
-        site_url = self.paths.get(website_path)
-        if not site_url:
+        site_url = self.paths.get(website_path) or website_path
+        result = urlparse(site_url)
+        if not all([result.scheme, result.netloc]):
             raise PathNotFoundError(LANG.WRAPPER_URL_NOT_DEFINED)
         temp_path = Path.cwd() / 'tmp'
         driver_path = Path.cwd() / 'chromedriver-win64' / 'chromedriver.exe'
